@@ -4,7 +4,7 @@ const mysql = require('mysql2');
 const { body, validationResult } = require('express-validator');
 const jwt = require('jsonwebtoken');
 
-// Configura la conexión a la base de datos
+// conexion a la base de datos
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -12,7 +12,7 @@ const db = mysql.createConnection({
   database: 'factura'  
 });
 
-// Conéctate a la base de datos
+// Conectar a la base de datos
 db.connect(err => {
   if (err) {
     console.error('Error de conexión:', err);

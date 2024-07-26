@@ -21,7 +21,7 @@ const UpdatePassword = () => {
       return;
     }
 
-    console.log('Token:', token); // Añadir esta línea para depuración
+    console.log('Token:', token); 
 
     Axios.put('http://localhost:3001/usuarios/update-password', { oldPassword, newPassword }, {
       headers: {
@@ -29,7 +29,7 @@ const UpdatePassword = () => {
       }
     })
       .then(response => {
-        console.log('Respuesta del servidor:', response.data); // Añadir esta línea para depuración
+        console.log('Respuesta del servidor:', response.data); 
         setSuccess('Contraseña actualizada con éxito');
         setError('');
       })
